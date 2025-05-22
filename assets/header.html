@@ -11,13 +11,21 @@
         position: fixed;
         top: 0;
         align-content: center;
+        width: 100%;
         h1 {
             margin: 0;
             font-size: 1.7em;
             width: 190px;
         }
+        a {
+            border-bottom: rgba(0, 0, 0, 0) 2px solid;
+            &:hover {
+                border-bottom: rgb(0, 0, 0) 2px solid;
+                cursor: pointer;
+            }
+            font-weight: 300;
+        }
         * {
-            flex-grow: 1;
             padding-bottom: 10px;
             align-content: center;
         }
