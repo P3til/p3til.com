@@ -2,7 +2,7 @@ const express = require('express');
 const crypto = require('crypto');
 const app = express();
 
-const secret = '16BIXWADvuFPetHcfDp7dMs5BT7J7MjkMqbahqiKSomUIDQmukXKby9TYj9JDZ3MJ';
+const secret = 'I replace this with my secret key :D';
 
 app.use(express.json({ verify: (req, res, buf) => {
   req.rawBody = buf;
