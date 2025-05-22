@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="signup/style.css">
 </head>
 <body>
     $assets/header.html;
-    <form action="/admin/signin" method="post">
+    <form action="/signin" method="post">
+        <h1>Sign Up</h1>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
         <button type="submit">Sign In</button>
+        <a href="/signin">Want to sign in instead?</a>
     </form>
 </body>
 </html>

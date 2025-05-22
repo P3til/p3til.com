@@ -1,0 +1,48 @@
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    h1 {
+        font-family: "Commissioner", sans-serif;
+        font-weight: 300;
+    }
+    label {
+        margin: 10px 2px;
+        font-family: "Commissioner", sans-serif;
+    }
+    input {
+        padding: 15px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: "Commissioner", sans-serif;
+    }
+    button {
+        margin-top: 15px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 100;
+        font-family: "Commissioner", sans-serif;
+    }
+    a {
+        margin-top: 20px;
+        text-decoration: none;
+        color: #007bff;
+        font-family: "Commissioner", sans-serif;
+    }
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.052);
+}

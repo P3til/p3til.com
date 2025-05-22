@@ -2,11 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const app = express();
+const crypto = require('crypto');
 
 app.get('/favicon.ico', (req, res) => {res.sendFile(path.join(__dirname, '/favicon.ico'))})
 
 app.get(['/*p', '/'], (req, res) => {
-    // $ File Work
+    // $ File Worker
     function $(filec, step=1) {
         if (step == 10) {return;}
         let filew = "";
@@ -40,12 +41,25 @@ app.get(['/*p', '/'], (req, res) => {
     
     // Determines if it is a index.html or other file
     if (req.path.split('/')[req.path.split('/').length - 1].includes('.')) {
-        return res.send($(fs.readFileSync(path.join(__dirname, req.path), 'utf-8')));
+        return res.sendFile(path.join(__dirname, 'src', req.path));
     }
 
     if (!(req.path.split('/')[req.path.split('/').length - 1].includes('.'))) {
         return res.send($(fs.readFileSync(path.join(__dirname, 'src', req.path, 'index.html'), 'utf8')));
     }
+});
+
+app.use(express.urlencoded({ extended: true }));
+app.post('/signin', async (req, res) =>{
+    console.log(req.body);
+    const { username, password } = req.body;
+    // Create a salt
+    const salt = crypto.randomBytes(16).toString('hex');
+    // Hash the password with the salt
+    const hash = crypto.pbkdf2Sync(password, salt, 100000, 64, 'sha512').toString('hex');
+    // Store hash and salt in your database (example only)
+    // db.saveUser({ username, passwordHash: hash, salt: salt });
+    res.redirect(301, '/');
 });
 
 app.listen(80);
