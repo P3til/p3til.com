@@ -1,44 +1,111 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <style>
+    .nunito-font {
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
     #main-header {
         padding: 10px 10px 0 10px;
         display: flex;
-        border-bottom: 0.5px solid #00000035;
         position: fixed;
         top: 0;
         align-content: center;
         width: 100%;
+        background-color: #000000;
         h1 {
-            margin: 0;
+            margin: 0 20px 10px 10px;
+            padding: 0 10px;
             font-size: 1.7em;
-            width: 190px;
+            width: auto;
+            font-family: "Commissioner", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            border-width: 0 1px 0 1px;
+            border-color: rgba(255, 255, 255, 0.292);
+            border-style: solid;
+            color: white;
+            user-select: none;
         }
         a {
-            border-bottom: rgba(0, 0, 0, 0) 2px solid;
+            margin: 10px 10px 0 0;
+            width: 70px;
+            text-align: center;
+            border-bottom: rgba(0, 0, 0, 0) 3px solid;
             &:hover {
-                border-bottom: rgb(0, 0, 0) 2px solid;
+                border-bottom: rgb(255, 255, 255) 3px solid;
                 cursor: pointer;
             }
             font-weight: 300;
+            font-family: "Commissioner", sans-serif;
+            color: white;
+            text-decoration: none;
         }
         * {
-            padding-bottom: 10px;
+            padding-bottom: 12px;
             align-content: center;
+            font-weight: 200;
+        }
+        div#profile-header {
+            height: 40px;
+            margin: 0 40px 0 auto;
+            display: flex;
+            margin-left: auto;
+            justify-content: right;
+            a {
+                text-align: right;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            button {
+                background-color: white;
+                text-align: center;
+                border-style: solid;
+                width: 80px;
+                margin-left: 10px;
+                padding: 10px;
+                border-radius: 100px;
+                font-weight: 400;
+                font-size: 0.9em;
+                font-family: "Commissioner", sans-serif;
+                cursor: pointer;
+                border-color: #ffffff;
+                border-width: 1px;
+                &:hover {
+                    background-color: #00000000;
+                    border-color: #ffffff;
+                    color: #ffffff;
+                    border-width: 1px;
+                }
+            }
         }
     }
     body {
-        margin: 0;
-        font-family: "Commissioner", sans-serif;
-    }
-    * {
+        margin: 60px 0 0 0;
+        font-family: Arial, Helvetica, sans-serif;
         font-weight: 200;
+
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
     }
 </style>
 <header id="main-header">
     <h1>P3til Studios</h1>
-    <a>Something</a>
+    <a href="/">Home</a>
+    <a>Projects</a>
+    <a>About</a>
+    <a>Contact</a>
+
+    <div id="profile-header">
+        <a href="/admin/signin">Sign In</a>
+        <a href="/admin/signup"><button>Sign Up</button></a>
+    </div>
 </header>
