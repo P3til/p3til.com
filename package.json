@@ -1,0 +1,20 @@
+{
+  "name": "p3til-studios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./admin/index.js",
+    "dev": "nodemon ./admin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.19"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
+  }
+}
